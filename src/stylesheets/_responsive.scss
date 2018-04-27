@@ -1,0 +1,57 @@
+// desktop
+
+@media (min-width: 481px) {
+  main {
+    section {
+      &.download {
+        a {
+          &:not(:first-child) {
+            margin-left: 2em;
+          }
+        }
+      }
+
+      &.screenshots {
+        figure {
+          width: 20em;
+
+          &:not(:first-child) {
+            margin-left: 2em;
+          }
+        }
+      }
+    }
+  }
+}
+
+// mobile
+
+@media (max-width: 480px) {
+  main {
+    section {
+      &.download {
+        flex-direction: column;
+
+        a {
+          width: 100%;
+
+          &:not(:first-child) {
+            margin-top: 1em;
+          }
+        }
+      }
+
+      &.screenshots {
+        flex-direction: column;
+
+        figure {
+          width: 100%;
+
+          &:not(:first-child) {
+            margin-top: 2em;
+          }
+        }
+      }
+    }
+  }
+}
