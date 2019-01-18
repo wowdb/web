@@ -66,6 +66,7 @@ export default class Home extends Component {
           </section>
         </main>
         <aside>
+          <h2>Screenshots</h2>
           {images.map(({ image, title }) => (
             <figure key={title}>
               <img src={image} alt={title} />

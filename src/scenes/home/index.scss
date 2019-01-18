@@ -109,6 +109,10 @@
     flex-direction: column;
 
     aside {
+      h2 {
+        margin: 1em;
+      }
+
       figure {
         img {
           width: 100%;
@@ -122,6 +126,10 @@
   .home {
     aside {
       width: calc(1242 / 2688 * 100vh);
+
+      h2 {
+        display: none;
+      }
 
       figure {
         img {
