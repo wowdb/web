@@ -1,20 +1,24 @@
 .home {
-  header {
-    align-items: center;
-    display: flex;
-
-    img {
-      height: 4em;
-    }
-
-    h1 {
-      color: #fff;
-      margin: 0 0 0 1em;
-    }
-  }
+  display: flex;
+  min-height: 100vh;
 
   main {
-    margin: 2em 0;
+    flex: 1;
+    padding: 2em;
+
+    header {
+      align-items: center;
+      display: flex;
+
+      img {
+        height: 4em;
+      }
+
+      h1 {
+        color: #fff;
+        margin: 0 0 0 1em;
+      }
+    }
 
     section {
       margin: 4em 0 0;
@@ -46,11 +50,83 @@
       }
 
       .github:before {
-        background-image: url('../../assets/github.svg');
+        background-image: url('../../assets/social/github.svg');
       }
 
       .twitter:before {
-        background-image: url('../../assets/twitter.svg');
+        background-image: url('../../assets/social/twitter.svg');
+      }
+    }
+  }
+
+  aside {
+    background: #121e33;
+    position: relative;
+
+    figure {
+      animation: slideshow 9s linear 0s infinite;
+      position: absolute;
+      z-index: 3;
+
+      &:nth-child(2) {
+        animation-delay: 3s;
+        z-index: 2;
+      }
+
+      &:nth-child(3) {
+        animation-delay: 6s;
+        z-index: 1;
+      }
+
+      img {
+        display: block;
+      }
+    }
+  }
+}
+
+// animations
+
+@keyframes slideshow {
+  25% {
+    opacity: 1;
+  }
+  33.33% {
+    opacity: 0;
+  }
+  91.66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// responsive
+
+@media only screen and (max-width: 768px) {
+  .home {
+    flex-direction: column;
+
+    aside {
+      figure {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .home {
+    aside {
+      width: calc(1242 / 2688 * 100vh);
+
+      figure {
+        img {
+          max-height: 100vh;
+        }
       }
     }
   }

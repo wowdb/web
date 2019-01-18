@@ -1,18 +1,35 @@
 import React, { Component } from 'react'
 
-import { wowdb } from '../../assets'
+import { screenshots, wowdb } from '../../assets'
 
 import './index.scss'
+
+const { achievement, search, weapon } = screenshots
+
+const images = [
+  {
+    image: search,
+    title: 'Search'
+  },
+  {
+    image: achievement,
+    title: 'Achievement'
+  },
+  {
+    image: weapon,
+    title: 'Weapon'
+  }
+]
 
 export default class Home extends Component {
   render() {
     return (
       <div className="home">
-        <header>
-          <img src={wowdb} alt="WoWdb" />
-          <h1>WoWdb</h1>
-        </header>
         <main>
+          <header>
+            <img src={wowdb} alt="WoWdb" />
+            <h1>WoWdb</h1>
+          </header>
           <p>WoWdb is a mobile World of Warcraft database.</p>
           <section>
             <h2>Download</h2>
@@ -48,7 +65,13 @@ export default class Home extends Component {
             </a>
           </section>
         </main>
-        <footer />
+        <aside>
+          {images.map(({ image, title }) => (
+            <figure key={title}>
+              <img src={image} alt={title} />
+            </figure>
+          ))}
+        </aside>
       </div>
     )
   }
