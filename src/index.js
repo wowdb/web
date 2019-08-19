@@ -1,11 +1,10 @@
+import './index.scss'
+
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 
 import { Home } from './scenes'
-
 import * as serviceWorker from './serviceWorker'
-
-import './index.scss'
 
 class WoWdb extends Component {
   render() {
@@ -15,4 +14,4 @@ class WoWdb extends Component {
 
 ReactDOM.render(<WoWdb />, document.getElementById('root'))
 
-serviceWorker.unregister()
+serviceWorker.register()

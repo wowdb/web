@@ -1,8 +1,8 @@
+import './index.scss'
+
 import React, { Component } from 'react'
 
 import { screenshots, wowdb } from '../../assets'
-
-import './index.scss'
 
 const { achievement, search, weapon } = screenshots
 
