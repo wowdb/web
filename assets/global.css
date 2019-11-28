@@ -1,0 +1,23 @@
+/* fonts */
+
+@import url('https://rsms.me/inter/inter.css');
+
+/* tailwind */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* global */
+
+body {
+  @apply bg-primary cursor-default font-sans outline-none text-white text-center;
+}
+
+p {
+  @apply max-w-xs mx-auto;
+}
+
+h2 {
+  @apply text-3xl font-semibold text-accent;
+}
